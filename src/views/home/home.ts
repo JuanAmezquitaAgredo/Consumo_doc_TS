@@ -67,37 +67,37 @@ export function homeView() {
             localStorage.setItem('counts', counts);
 
             const getOptionchart1 = () => {
-                // Obtener los datos del localStorage
+                
                 const departments = localStorage.getItem('department') ? JSON.parse(localStorage.getItem('department') || '[]') : [];
                 const counts = localStorage.getItem('counts') ? JSON.parse(localStorage.getItem('counts') || '[]') : [];
                 
                 return {
                     xAxis: {
                         type: 'category',
-                        data: departments // Usar el array de departamentos como etiquetas en el eje x
+                        data: departments 
                     },
                     yAxis: {
                         type: 'value'
                     },
                     series: [
                         {
-                            data: counts, // Datos de los conteos de municipios
+                            data: counts, 
                             type: 'bar',
-                            // Añadir el tooltip a la serie
+                            
                             tooltip: {
-                                // Configuración del tooltip
+                                
                                 formatter: function (params: any) {
-                                    // params.name es el nombre del departamento y params.value es el conteo
+                                    
                                     return `${params.name}<br>Municipios: ${params.value}`;
                                 }
                             }
                         }
                     ],
-                    // Configuración del tooltip general del gráfico
+                    
                     tooltip: {
-                        trigger: 'axis', // Se activará al pasar el mouse sobre el eje
+                        trigger: 'axis', 
                         axisPointer: {
-                            type: 'shadow' // Utiliza una sombra en el eje para señalar el área activa
+                            type: 'shadow' 
                         }
                     }
                 };
