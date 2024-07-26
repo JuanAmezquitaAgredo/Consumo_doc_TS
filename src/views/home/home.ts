@@ -13,6 +13,7 @@ export function homeView() {
     <div id="tabla"></div>
     <button id="btnant">Anterior</button>
     <button id="btnsig">Siguiente</button>
+    <button onclick="downloadCSV()">Descargar CSV</button>
     <div id="chart" style="width: 100%; height: 400px;"></div>
     `;
 
@@ -47,6 +48,8 @@ export function homeView() {
             e.preventDefault();
             const datafilter = dataFilter(data);
             updateTable(datafilter);
+            localStorage.setItem('downloadData', JSON.stringify(datafilter));
+
             const countController = new CountController();
             const resultcount = countController.countMunicipiosByDepartment(datafilter);
             console.log(resultcount);
