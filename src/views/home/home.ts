@@ -1,4 +1,5 @@
 import { CountController } from "../../controllers/count_controller";
+import { DownloadController } from "../../controllers/download-controller";
 import { TableController } from "../../controllers/table_controller";
 import { navigateTo } from "../../router";
 import * as echarts from "echarts";
@@ -13,7 +14,7 @@ export function homeView() {
     <div id="tabla"></div>
     <button id="btnant">Anterior</button>
     <button id="btnsig">Siguiente</button>
-    <button onclick="downloadCSV()">Descargar CSV</button>
+    <button id="btnCSV">Descargar CSV</button>
     <div id="chart" style="width: 100%; height: 400px;"></div>
     `;
 
@@ -128,7 +129,14 @@ export function homeView() {
         return datafilter;
     }
 
-    //**Chart */
+    //**Download CSV */
 
+    const btnCSV = document.getElementById('btnCSV') as HTMLButtonElement;
+    btnCSV.addEventListener('click', (e) => {
+        e.preventDefault();
+        const downloadcsv = new DownloadController();
+        downloadcsv.downloadCSV();
+    });
+    
     
 }
