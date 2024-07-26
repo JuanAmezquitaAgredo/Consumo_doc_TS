@@ -1,7 +1,6 @@
 
 export class TableController {
 
-
     createtable(data: any[], pagina: number, itemsPorPagina: number): string {
         const startIndex = (pagina - 1) * itemsPorPagina;
         const pageData = data.slice(startIndex, startIndex + itemsPorPagina);
@@ -43,7 +42,6 @@ export class TableController {
         }
         return html;
     }
-    
     
     cambiarPagina(pagina: number, data: any[]) {
         const itemsPorPagina = 15; 
