@@ -17,7 +17,6 @@ export function homeView() {
     const NumData = document.getElementById('NumData') as HTMLSpanElement;
     const filterInt = document.getElementById('inputFilter') as HTMLInputElement;
 
-
     const logout = document.getElementById('logout') as HTMLButtonElement;
     logout.addEventListener('click', (e) => {
         e.preventDefault();
