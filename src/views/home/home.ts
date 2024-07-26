@@ -7,7 +7,7 @@ import * as echarts from "echarts";
 export function homeView() {
     const $root = document.getElementById('root') as HTMLElement;
     $root.innerHTML = /*html*/`
-    <h1>ANALISIS DE DATOS</h1>
+    <h1>DEPARTAMENTOS Y MUNICIPIOS <br> DE COLOMBIA</h1>
     <div id="home">
         <nav id="nav">
             <button id="logout">Salir</button>
