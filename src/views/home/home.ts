@@ -8,14 +8,25 @@ export function homeView() {
     const $root = document.getElementById('root') as HTMLElement;
     $root.innerHTML = /*html*/`
     <h1>ANALISIS DE DATOS</h1>
-    <button id="logout">Salir</button>
-    <input type="text" id="inputFilter">
-    <span id="NumData"></span>
-    <div id="tabla"></div>
-    <button id="btnant">Anterior</button>
-    <button id="btnsig">Siguiente</button>
-    <button id="btnCSV">Descargar CSV</button>
-    <div id="chart" style="width: 100%; height: 400px;"></div>
+    <div id="home">
+        <nav id="nav">
+            <button id="logout">Salir</button>
+            <input type="text" id="inputFilter" placeholder="Buscar...">
+            <span id="NumData"></span>
+        </nav>
+        <div id="tabla"></div>
+        <div id="btns">
+            <div>
+                <button id="btnant">Anterior</button>
+                <button id="btnsig">Siguiente</button>
+            </div>
+            <div>
+                <button id="btnCSV">Descargar CSV</button>
+            </div>
+        </div>
+        <div id="chart" style="width: 100%; height: 400px;"></div>
+    </div>
+    
     `;
 
     const csvtext = localStorage.getItem('data');

@@ -23,9 +23,14 @@ a:hover {
 }
 
 body {
+  background: linear-gradient(to bottom, 
+  #FFD700 33.33%, 
+  #FFD700 33.33%, #0033A0 66.66%, 
+  #0033A0 66.66%, #CE1126 100%);
   margin: 0;
   display: flex;
   place-items: center;
+  justify-content: center;
   min-width: 320px;
   min-height: 100vh;
 }
@@ -33,6 +38,7 @@ body {
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+  text-align: center;
 }
 
 #app {
@@ -69,12 +75,11 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
   cursor: pointer;
   transition: border-color 0.25s;
 }
 button:hover {
-  border-color: #646cff;
+  border: 2px solid #000000;
 }
 button:focus,
 button:focus-visible {
@@ -92,4 +97,56 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+#nav{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+
+}
+
+#inputFilter{
+  width: 200px;
+  height: 20px;
+  border-radius: 20px;
+}
+
+#home{
+  background-color: rgb(255, 255, 255);
+  padding: 20px;
+  border-radius: 20px;
+}
+
+#btns{
+  display: flex;
+  justify-content: space-between;
+  align-items: center
+}
+
+#btnant, #btnsig{
+  background-color: #6491f3;
+}
+
+#btnCSV{
+  background-color: rgb(133, 255, 133);
+}
+
+#logout{
+  background-color: rgb(253, 117, 117);
+}
+
+#upFile{
+  background-color: rgb(255, 255, 255);
+  padding: 20px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#file{
+  
 }
