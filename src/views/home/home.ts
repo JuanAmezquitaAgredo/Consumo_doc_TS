@@ -144,6 +144,8 @@ export function homeView() {
 
     const btnCSV = document.getElementById('btnCSV') as HTMLButtonElement;
     btnCSV.addEventListener('click', (e) => {
+        const confirm = window.confirm('¿Desea descargar el archivo CSV?');
+        if (!confirm) return;
         e.preventDefault();
         const downloadcsv = new DownloadController();
         downloadcsv.downloadCSV();
