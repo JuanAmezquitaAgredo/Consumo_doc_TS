@@ -36,7 +36,7 @@ export function homeView() {
     const logout = document.getElementById('logout') as HTMLButtonElement;
     logout.addEventListener('click', (e) => {
         e.preventDefault();
-        localStorage.removeItem('data');
+        localStorage.clear();
         navigateTo('/up-file');
     });
 
